@@ -1,0 +1,18 @@
+{
+	"userStatus": [
+		{ "status": 1, "name": "Create" },
+		{ "status": 2, "name": "Active" },
+		{ "status": 3, "name": "Inactive" },
+		{ "status": 4, "name": "Block" }
+	],
+
+	"agentStatus": [
+		{ "status": 1, "name": "Active" },
+		{ "status": 2, "name": "Inactive" }
+	],
+
+	"campaignStatus": [
+		{ "status": 0, "name": "Active" },
+		{ "status": 1, "name": "Inactive" }
+	]
+}

@@ -1,0 +1,64 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"first_name": "Amit",
+			"last_name": "Kumar",
+			"image_url": "https://placehold.co/200x200?text=User",
+			"email": "amit.kumar@example.com",
+			"status": 1,
+			"gender": 1,
+			"phone" : "9051557231",
+			"created_at": "2025-08-21T07:52:57.273Z",
+			"updated_at": "2025-08-21T07:52:57.273Z"
+		},
+		{
+			"id": 2,
+			"first_name": "Sara",
+			"last_name": "Khan",
+			"image_url": "https://placehold.co/200x200?text=User",
+			"email": "sara.khan@example.com",
+			"status": 2,
+			"gender": 3,
+			"phone": "9876543210",
+			"created_at": "2025-08-22T10:15:30.123Z",
+			"updated_at": "2025-08-22T10:15:30.123Z"
+		},
+		{
+			"id": 3,
+			"first_name": "Ravi",
+			"last_name": "Sharma",
+			"image_url": "https://placehold.co/200x200?text=User",
+			"email": "ravi.sharma@example.com",
+			"status": 1,
+			"gender": 2,
+			"phone": "8876543210",
+			"created_at": "2025-08-23T14:20:45.543Z",
+			"updated_at": "2025-08-23T14:20:45.543Z"
+		},
+		{
+			"id": 4,
+			"first_name": "Neha ",
+			"last_name": "Verma",
+			"image_url": "https://placehold.co/200x200?text=User",
+			"email": "neha.verma@example.com",
+			"status": 2,
+			"gender": 2,
+			"phone": "9876543211",
+			"created_at": "2025-08-24T09:05:15.888Z",
+			"updated_at": "2025-08-24T09:05:15.888Z"
+		},
+		{
+			"id": 5,
+			"first_name": "Arjun ",
+			"last_name": "Mehta",
+			"image_url": "https://placehold.co/200x200?text=User",
+			"email": "arjun.mehta@example.com",
+			"status": 1,
+			"gender": 3,
+			"phone": "7876543210",
+			"created_at": "2025-08-25T16:45:22.666Z",
+			"updated_at": "2025-08-25T16:45:22.666Z"
+		}
+	]
+}

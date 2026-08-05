@@ -1,0 +1,37 @@
+{
+  "campaigns": [
+    {
+      "id": 1,
+      "title": "Summer Sale Campaign",
+      "description": "Campaign for summer sale promotions",
+      "did": "CMP001",
+      "utm_source": "facebook",
+      "endpoint_url": "https://placehold.co/200x200?text=Campaign",
+      "status": 0,
+      "created_at": "2026-05-15 09:00:00",
+      "updated_at": "2026-05-15 09:00:00"
+    },
+    {
+      "id": 2,
+      "title": "Google Leads Campaign",
+      "description": "Lead generation campaign using Google Ads",
+      "did": "CMP002",
+      "utm_source": "google",
+      "endpoint_url": "https://placehold.co/200x200?text=Campaign",
+      "status": 1,
+      "created_at": "2026-05-15 10:30:00",
+      "updated_at": "2026-05-15 11:00:00"
+    },
+    {
+      "id": 3,
+      "title": "Instagram Engagement Campaign",
+      "description": "Campaign to increase Instagram engagement",
+      "did": "CMP003",
+      "utm_source": "instagram",
+      "endpoint_url": "https://placehold.co/200x200?text=Campaign",
+      "status": 0,
+      "created_at": "2026-05-15 12:00:00",
+      "updated_at": "2026-05-15 12:20:00"
+    }
+  ]
+}
