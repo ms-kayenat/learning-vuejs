@@ -32,6 +32,11 @@ import DocumentEditPage from '@/pages/document/DocumentEditPage.vue'
 
 
 
+// Abdulla
+import ColorPickerPage from '@/pages/Abdullah/ColorPickerPage.vue'
+
+//Abdulla end 
+
 
 // Import other pages...
 
@@ -71,6 +76,13 @@ const routes = [
 			{ path: 'documents/:id/show', name: 'document.show', component: DocumentShowPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
 			{ path: 'documents/create', name: 'document.create', component: DocumentCreatePage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
 			{ path: 'documents/:id/edit', name: 'document.edit', component: DocumentEditPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
+
+			// Abdullah -->
+
+			{path:'Abdullah/color-picker' , name : 'Abdullah.colorPicker' , component: ColorPickerPage , meta: {requiresAuth: false}}
+			// url http://localhost:5173/app/Abdullah/color-picker
+
+			// Abdullah END ...
 
 		],
 
