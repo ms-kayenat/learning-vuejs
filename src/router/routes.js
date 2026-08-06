@@ -30,6 +30,9 @@ import DocumentShowPage from '@/pages/document/DocumentShowPage.vue'
 import DocumentCreatePage from '@/pages/document/DocumentCreatePage.vue'
 import DocumentEditPage from '@/pages/document/DocumentEditPage.vue'
 
+//ijaj
+import ThemeCustomizerPage from '@/pages/ijaj/ThemeCustomizerPage.vue'
+
 
 
 
@@ -71,7 +74,9 @@ const routes = [
 			{ path: 'documents/:id/show', name: 'document.show', component: DocumentShowPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
 			{ path: 'documents/create', name: 'document.create', component: DocumentCreatePage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
 			{ path: 'documents/:id/edit', name: 'document.edit', component: DocumentEditPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-
+			
+			//ijaj
+			{ path: 'ijaj/themecustomizer', name: 'theme-customizer', component: ThemeCustomizerPage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } }
 		],
 
 	},
