@@ -30,54 +30,161 @@ import DocumentShowPage from '@/pages/document/DocumentShowPage.vue'
 import DocumentCreatePage from '@/pages/document/DocumentCreatePage.vue'
 import DocumentEditPage from '@/pages/document/DocumentEditPage.vue'
 
-
-
-
+//raihan
+import LogoMaker from '@/pages/raihan/LogoMaker.vue'
 // Import other pages...
 
 const routes = [
-	{ path: '/', redirect: { name: 'home' } },
-	{ path: '/app', name: 'home', component: HomePage },
-	{ path: '/app/login', name: 'auth.login', component: LoginPage, meta: { requiresAuth: false } },
-	{ path: '/app/logout', name: 'auth.logout', component: LogoutPage, meta: { requiresAuth: false } },
-	{
-		path: '/app',
-		component: MainLayoutView,
-		meta: { requiresAuth: false },
-		children: [
-			{ path: 'dashboard', name: 'dashboard', component: DashboardPage, meta: { requiresAuth: false, roles: [1, 2] } },
-			{ path: 'profile', name: 'profile', component: ProfileIndexPage, meta: { requiresAuth: false, roles: [1, 2] } },
+  { path: '/', redirect: { name: 'home' } },
+  { path: '/app', name: 'home', component: HomePage },
+  { path: '/app/login', name: 'auth.login', component: LoginPage, meta: { requiresAuth: false } },
+  {
+    path: '/app/logout',
+    name: 'auth.logout',
+    component: LogoutPage,
+    meta: { requiresAuth: false },
+  },
+  {
+    path: '/app',
+    component: MainLayoutView,
+    meta: { requiresAuth: false },
+    children: [
+      {
+        path: 'dashboard',
+        name: 'dashboard',
+        component: DashboardPage,
+        meta: { requiresAuth: false, roles: [1, 2] },
+      },
+      {
+        path: 'profile',
+        name: 'profile',
+        component: ProfileIndexPage,
+        meta: { requiresAuth: false, roles: [1, 2] },
+      },
 
-			// user
-			{ path: 'users', name: 'user.index', component: UserIndexPage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'users/create', name: 'user.create', component: UserCreatePage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'users/:id/show', name: 'user.show', component: UserShowPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'users/:id/edit', name: 'user.edit', component: UserEditPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
+      // user
+      {
+        path: 'users',
+        name: 'user.index',
+        component: UserIndexPage,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'users/create',
+        name: 'user.create',
+        component: UserCreatePage,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'users/:id/show',
+        name: 'user.show',
+        component: UserShowPage,
+        props: true,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'users/:id/edit',
+        name: 'user.edit',
+        component: UserEditPage,
+        props: true,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
 
-			//agent
-			{ path: 'agents', name: 'agent.index', component: AgentIndexPage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'agents/:id/show', name: 'agent.show', component: AgentShowPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'agents/create', name: 'agent.create', component: AgentCreatePage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'agents/:id/edit', name: 'agent.edit', component: AgentEditPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
+      //agent
+      {
+        path: 'agents',
+        name: 'agent.index',
+        component: AgentIndexPage,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'agents/:id/show',
+        name: 'agent.show',
+        component: AgentShowPage,
+        props: true,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'agents/create',
+        name: 'agent.create',
+        component: AgentCreatePage,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'agents/:id/edit',
+        name: 'agent.edit',
+        component: AgentEditPage,
+        props: true,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
 
-			//campaign
-			{ path: 'campaigns', name: 'campaign.index', component: CampaignIndexPage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'campaigns/:id/show', name: 'campaign.show', component: CampaignShowPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'campaigns/create', name: 'campaign.create', component: CampaignCreatePage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'campaigns/:id/edit', name: 'campaign.edit', component: CampaignEditPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
+      //campaign
+      {
+        path: 'campaigns',
+        name: 'campaign.index',
+        component: CampaignIndexPage,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'campaigns/:id/show',
+        name: 'campaign.show',
+        component: CampaignShowPage,
+        props: true,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'campaigns/create',
+        name: 'campaign.create',
+        component: CampaignCreatePage,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'campaigns/:id/edit',
+        name: 'campaign.edit',
+        component: CampaignEditPage,
+        props: true,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
 
-			//document
-			{ path: 'documents', name: 'document.index', component: DocumentIndexPage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'documents/:id/show', name: 'document.show', component: DocumentShowPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'documents/create', name: 'document.create', component: DocumentCreatePage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
-			{ path: 'documents/:id/edit', name: 'document.edit', component: DocumentEditPage, props: true, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
+      //document
+      {
+        path: 'documents',
+        name: 'document.index',
+        component: DocumentIndexPage,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'documents/:id/show',
+        name: 'document.show',
+        component: DocumentShowPage,
+        props: true,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'documents/create',
+        name: 'document.create',
+        component: DocumentCreatePage,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      {
+        path: 'documents/:id/edit',
+        name: 'document.edit',
+        component: DocumentEditPage,
+        props: true,
+        meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] },
+      },
+      //raihan
+      {
+        path: 'logo-maker',
+        name: 'logo-maker',
+        component: LogoMaker,
+        meta: { requiresAuth: false },
+      },
+    ],
+  },
 
-		],
+  /////////////////////////////////////////////////////////
+  // Error pages
+]
 
-	},
-
-	/////////////////////////////////////////////////////////
-	// Error pages
-];
-
-export default routes;
+export default routes
