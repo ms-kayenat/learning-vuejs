@@ -1,42 +1,85 @@
 <script setup>
-import { ref } from 'vue'
+import ColorBox from './ColorBox.vue'
 
-const cardColors = ['#2B203E','#10233F','#4A6A63']
-const circleColors = ['#B6F5D8','#FFE5E9','#DAD2FF']
+defineProps({
+  selectedCardColor: {
+    type: String,
+    required: true
+  },
 
-const selectedCardColor = ref(cardColors[0])
-const selectedCircleColor = ref(circleColors[0])
+  selectedCircleColor: {
+    type: String,
+    required: true
+  }
+})
 
-const changeCardColor = (color) => {
-  selectedCardColor.value = color
-}
+const emit = defineEmits([
+  'update:cardColor',
+  'update:circleColor'
+])
 
-const changeCircleColor = (color) => {
-  selectedCircleColor.value = color
-}
+const cardColors = [
+  '#2B203E',
+  '#10233F',
+  '#4A6A63'
+]
+
+const circleColors = [
+  '#B6F5D8',
+  '#FFE5E9',
+  '#DAD2FF'
+]
 </script>
 
 <template>
   <div class="theme-customizer">
+
     <div class="top-section">
+
+      <!-- Card Colors -->
+
       <div class="palette-box">
         <h3>Card Color</h3>
+
         <div class="color-list">
-          <div v-for="color in cardColors" :key="color" class="color-item" :style="{ backgroundColor: color }"
-            @click="changeCardColor(color)" />
+          <ColorBox
+            v-for="color in cardColors"
+            :key="color"
+            :color="color"
+            @select="emit('update:cardColor', color)"
+          />
         </div>
       </div>
+
+      <!-- Circle Colors -->
+
       <div class="palette-box">
         <h3>Circle Color</h3>
+
         <div class="color-list">
-          <div v-for="color in circleColors" :key="color" class="color-item" :style="{ backgroundColor: color }"
-            @click="changeCircleColor(color)" />
+          <ColorBox
+            v-for="color in circleColors"
+            :key="color"
+            :color="color"
+            @select="emit('update:circleColor', color)"
+          />
         </div>
       </div>
+
     </div>
-    <div class="preview-card" :style="{ backgroundColor: selectedCardColor }">
-      <div class="preview-circle" :style="{ backgroundColor: selectedCircleColor }" />
+
+    <!-- Preview -->
+
+    <div
+      class="preview-card"
+      :style="{ backgroundColor: selectedCardColor }"
+    >
+      <div
+        class="preview-circle"
+        :style="{ backgroundColor: selectedCircleColor }"
+      />
     </div>
+
   </div>
 </template>
 
@@ -60,13 +103,7 @@ const changeCircleColor = (color) => {
 .color-list {
   display: flex;
   gap: 12px;
-}
-
-.color-item {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  cursor: pointer;
+  flex-wrap: wrap;
 }
 
 .preview-card {
@@ -82,8 +119,8 @@ const changeCircleColor = (color) => {
 }
 
 .preview-circle {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 
   transition: 0.3s;
