@@ -18,29 +18,6 @@ const menuItems = ref([
 		icon: "ri-dashboard-2-line",
 		roles: [1, 2],
 	},
-	// {
-	//   name: "Products",
-	//   link: "product.index",
-	//   icon: "ri-box-3-line",
-	//   roles: [1, 2],
-	// },
-	// {
-	//   name: "Categories",
-	//   link: "category.index",
-	//   icon: "ri-database-2-line",
-	//   roles: [1, 2],
-	// },
-	// {
-	//   name: "Brands",
-	//   link: "brand.index",
-	//   icon: "ri-box-3-line",
-	//   roles: [1, 2],
-	// },
-	// {
-	//   name: "Orders",
-	//   link: "order.index",
-	//   icon: "ri-box-3-line",
-	// },
 	{
 		name: "Campaigns",
 		link: "campaign.index",
@@ -65,12 +42,6 @@ const menuItems = ref([
 		icon: "ri-file-ai-line",
 		roles: [1, 2],
 	},
-	// {
-	//   name: "Payments",
-	//   link: "payment.index",
-	//   icon: "ri-box-3-line",
-	//   roles: [1, 2],
-	// },
 	{
 		name: "Profile",
 		link: "profile",
@@ -81,6 +52,12 @@ const menuItems = ref([
 		name: "Logout",
 		link: "auth.logout",
 		icon: "ri-logout-circle-r-line",
+		roles: [1],
+	},
+	{
+		name: "Ijaj Akhtar",
+		link: "ijaj.home.index",
+		icon: "ri-user-3-line",
 		roles: [1],
 	},
 ]);
