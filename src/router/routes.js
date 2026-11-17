@@ -31,6 +31,7 @@ import DocumentCreatePage from '@/pages/document/DocumentCreatePage.vue'
 import DocumentEditPage from '@/pages/document/DocumentEditPage.vue'
 
 import IjajHomePage from '@/ijaj/pages/IjajHomePage.vue'
+import RaihanPage from '@/pages/raihan/RaihanPage.vue'
 
 
 
@@ -76,6 +77,9 @@ const routes = [
 
 			// IJAJ
 			{ path: 'ijaj-home-page', name: 'ijaj.home.index', component: IjajHomePage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
+
+      // Raihan
+      { path: 'raihan', name: 'raihan', component: RaihanPage, meta: { requiresAuth: true, isAdmin: true, roles: [1, 2] } },
 
 
 

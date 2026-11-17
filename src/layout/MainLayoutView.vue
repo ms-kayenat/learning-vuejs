@@ -60,6 +60,12 @@ const menuItems = ref([
 		icon: "ri-user-3-line",
 		roles: [1],
 	},
+  {
+    name: "Raihan",
+    link: "raihan",
+    icon: "ri-user-3-line",
+    roles: [1, 2],
+  },
 ]);
 
 const filteredMenuItems = computed(() => {
