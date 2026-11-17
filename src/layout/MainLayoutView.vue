@@ -60,6 +60,12 @@ const menuItems = ref([
 		icon: "ri-user-3-line",
 		roles: [1],
 	},
+	{
+		name: "Faizan Akhtar",
+		link: "faizan.home.index",
+		icon: "ri-user-3-line",
+		roles: [1],
+	},
 ]);
 
 const filteredMenuItems = computed(() => {
