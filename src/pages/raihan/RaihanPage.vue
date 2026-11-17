@@ -1,5 +1,9 @@
 <script setup>
+import { ref } from 'vue';
 import Button from '@/components/button/Button.vue'
+
+const processing = ref(false);
+
 </script>
 
 <template>
@@ -15,7 +19,7 @@ import Button from '@/components/button/Button.vue'
       <Button class="is-primary" :loading="true">
         Button (loading true)
       </Button>
-      <Button class="is-primary" :loading="false">
+      <Button class="is-primary" :loading="processing">
         Button (loading false)
       </Button>
     </div>

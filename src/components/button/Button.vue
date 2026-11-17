@@ -1,12 +1,15 @@
 <script setup>
-defineProps({
-  loading: Boolean
+const props = defineProps({
+  loading: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
 <template>
-  <button class="button" :disabled="loading">
-    <slot v-if="!loading"></slot>
+  <button class="button" :disabled="props.loading">
+    <slot v-if="!props.loading"></slot>
     <span v-else>Loading...</span>
   </button>
 </template>
